@@ -236,14 +236,16 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 md:px-2 py-1 text-sm font-normal text-black"
     >
 
-      <span className="  text-black border   dark:text-white italic px-2 py-2 rounded-lg font-bold   "><span className=" text-blue-500 text-sm ">Rhone</span><span className=" text-black text-sm ">Robotics</span></span>
-    </a>
-  );
+      <span className="  text-black border   dark:text-white   px-2 py-2 rounded-lg font-bold   "><span className=" text-blue-500 text-sm md:text-base">Rhone</span><span className=" text-black text-sm md:text-base">Robotics</span></span>
+      </a>
+    );
 };
+
 
 export const NavbarButton = ({
   href,
   as: Tag = "a",
+
   children,
   className,
   variant = "primary",

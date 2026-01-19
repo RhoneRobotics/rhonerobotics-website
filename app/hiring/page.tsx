@@ -110,7 +110,7 @@ export default function HiringPage() {
                     {/* Headline: Black & Gray, No Red Text */}
                     <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter mb-6 md:mb-8 text-black leading-[1.1] md:leading-[1.05]">
                         Join us as a <br className="hidden md:block" />
-                        <span className="text-gray-400">Photoshop Trainee.</span>
+                        <span className="text-gray-400">Digital Draper Trainee.</span>
                     </motion.h1>
 
                     <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-gray-500 max-w-xl md:max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed font-light tracking-tight px-2">
@@ -176,7 +176,7 @@ export default function HiringPage() {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter mb-6 md:mb-8 text-black">
-                            Photoshop <br className="hidden lg:block" /> Trainee
+                            Digital Draper <br className="hidden lg:block" /> Trainee
                         </h2>
 
                         <div className="prose prose-lg text-gray-500 font-light mb-8 md:mb-10 max-w-xl text-base md:text-lg">
