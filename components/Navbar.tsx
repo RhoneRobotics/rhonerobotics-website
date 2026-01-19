@@ -57,11 +57,11 @@ export function Navbar() {
         </NavBody>
 
 
-        <NavbarExtra className="fixed bottom-5 right-5 z-[60] hidden md:block">
+        <NavbarExtra className="fixed bottom-5 right-5 z-[60]">
           <NavbarButton
             variant="primary"
             href="/hiring"
-            className="bg-gradient-to-b from-[#000000] via-[#484848] via-70% to-[#3f3f3f] hover:bg-green-600 text-neutral-50 border-0 shadow-lg text-lg font-semibold"
+            className="bg-gradient-to-b from-[#000000] via-[#484848] via-70% to-[#3f3f3f] hover:bg-green-600 text-neutral-50 border-0 shadow-lg text-[10px] md:text-lg font-semibold px-3 py-2 md:px-6 md:py-3"
           >
             We are Hiring !
           </NavbarButton>

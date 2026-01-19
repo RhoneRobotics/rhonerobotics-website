@@ -1,6 +1,6 @@
 "use client";
 import { motion, Variants } from 'motion/react';
-import { MapPin, Send, Phone, ArrowRight, Loader2 } from 'lucide-react';
+import { ArrowRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { Toaster, toast } from 'sonner';
 
@@ -45,106 +45,39 @@ const Contact = () => {
     };
 
 
-    const fadeInUp: Variants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
-        }
-    };
 
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2
-            }
-        }
-    };
 
     return (
-        <section className="py-10 md:py-28 px-6 md:px-12 lg:px-20 bg-neutral-50 overflow-hidden" id="contact">
+        <section className="pt-24 md:pt-48 pb-10 md:pb-28 px-5 md:px-12 lg:px-20 bg-neutral-50 overflow-hidden" id="contact">
             <Toaster position="top-right" />
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
-                <div className="flex flex-col lg:flex-row justify-between items-start md:gap-12 gap-6 md:mb-20 mb-10">
-                    <div className="max-w-xl">
+                <div className="flex flex-col items-center text-center gap-6 md:mb-24 mb-16">
+                    <div className="max-w-3xl">
                         <motion.h2
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="text-6xl md:text-8xl font-bold tracking-tight mb-8 font-jakarta text-neutral-900"
+                            className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 font-jakarta text-neutral-900"
                         >
                             Let&apos;s Talk!
                         </motion.h2>
                     </div>
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.4 }}
-                        className="lg:max-w-md lg:text-right"
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="max-w-2xl"
                     >
-                        <p className="text-lg font-medium text-neutral-500 font-jakarta leading-relaxed">
+                        <p className="md:text-lg font-medium text-neutral-500 font-jakarta leading-relaxed">
                             Send us a message and we will get back to you within 24 hours to arrange a call!
                         </p>
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                        className="space-y-8"
-                    >
-                        <motion.div
-                            variants={fadeInUp}
-                            className="bg-white p-8 rounded-[2.5rem] border border-neutral-100 shadow-sm transition-all hover:shadow-xl hover:shadow-neutral-200/50 group md:h-[300px] h-[250px] flex flex-col justify-between"
-                        >
-                            <div className="w-14 h-14 bg-neutral-50 rounded-2xl flex items-center justify-center text-neutral-900 transition-colors group-hover:bg-rose-50 group-hover:text-rose-700">
-                                <MapPin className="w-6 h-6" />
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-bold text-neutral-900 mb-2 font-jakarta">Office:</h3>
-                                <p className="text-neutral-500 md:text-lg font-jakarta">London/India</p>
-                            </div>
-                        </motion.div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <motion.div
-                                variants={fadeInUp}
-                                className="bg-white p-10 rounded-[2.5rem] border border-neutral-100 shadow-sm transition-all hover:shadow-xl hover:shadow-neutral-200/50 group md:h-[300px] h-[250px] flex flex-col justify-between"
-                            >
-                                <div className="w-14 h-14 bg-neutral-50 rounded-2xl flex items-center justify-center text-neutral-900 transition-colors group-hover:bg-rose-50 group-hover:text-rose-700">
-                                    <Send className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold text-neutral-900 mb-2 font-jakarta">Chat to sales</h3>
-                                    <p className="text-neutral-500 font-jakarta">support@rhonerobotics.com</p>
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                variants={fadeInUp}
-                                className="bg-white p-10 rounded-[2.5rem] border border-neutral-100 shadow-sm transition-all hover:shadow-xl hover:shadow-neutral-200/50 group md:h-[300px] h-[250px] flex flex-col justify-between"
-                            >
-                                <div className="w-14 h-14 bg-neutral-50 rounded-2xl flex items-center justify-center text-neutral-900 transition-colors group-hover:bg-red-50 group-hover:text-rose-700">
-                                    <Phone className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold text-neutral-900 mb-2 font-jakarta">Call Us</h3>
-                                    <p className="text-neutral-500 text-lg font-jakarta">+44 7770 121501</p>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </motion.div>
-
+                <div className="max-w-5xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +85,7 @@ const Contact = () => {
                         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                         className="bg-white p-6 md:p-12 rounded-[2rem] border border-neutral-100 shadow-sm"
                     >
-                        <form className="space-y-6 md:space-y-8" onSubmit={handleSubmit}>
+                        <form className="space-y-8 md:space-y-12" onSubmit={handleSubmit}>
                             {/* Honeypot field */}
                             <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
                             <div className="space-y-4 md:space-y-6">

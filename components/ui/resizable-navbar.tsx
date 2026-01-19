@@ -233,10 +233,10 @@ export const NavbarLogo = () => {
   return (
     <a
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 md:px-2 py-1 text-sm font-normal text-black"
     >
 
-      <span className="font-medium text-black dark:text-white border -rotate-12 px-2 py-1 rounded-lg font-bold text-lg ">R-R</span>
+      <span className="  text-black border   dark:text-white italic px-2 py-2 rounded-lg font-bold   "><span className=" text-blue-500 text-sm ">Rhone</span><span className=" text-black text-sm ">Robotics</span></span>
     </a>
   );
 };

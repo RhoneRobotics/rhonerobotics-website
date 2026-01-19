@@ -284,7 +284,7 @@ export default function HiringPage() {
                                             name="name"
                                             value={formState.name}
                                             onChange={handleInputChange}
-                                            className="w-full   border-gray-200 py-2 px-2 md:px-3 md:py-4 focus:outline-none focus:border-black transition-all text-base md:text-xl text-black bg-neutral-50 placeholder:text-gray-200 rounded-xl"
+                                            className="w-full   border-gray-200 py-2 px-3 md:px-3 md:py-4 focus:outline-none focus:border-black transition-all text-sm md:text-xl text-black bg-neutral-50 placeholder:text-gray-200 rounded-xl "
                                             placeholder="John Doe"
                                         />
                                     </div>
@@ -296,7 +296,7 @@ export default function HiringPage() {
                                             type="email"
                                             value={formState.email}
                                             onChange={handleInputChange}
-                                            className="w-full   border-gray-200 py-2 px-2 md:px-3 md:py-4 focus:outline-none focus:border-black transition-all text-base md:text-xl text-black bg-neutral-50 placeholder:text-gray-200 rounded-xl"
+                                            className="w-full   border-gray-200 py-2 px-3 md:px-3 md:py-4 focus:outline-none focus:border-black transition-all text-sm md:text-xl text-black bg-neutral-50 placeholder:text-gray-200 rounded-xl"
                                             placeholder="john@example.com"
                                         />
                                     </div>
@@ -310,7 +310,7 @@ export default function HiringPage() {
                                         type="tel"
                                         value={formState.phone}
                                         onChange={handleInputChange}
-                                        className="w-full   border-gray-200 py-2 px-2 md:px-3 md:py-4 focus:outline-none focus:border-black transition-all text-base md:text-xl text-black bg-neutral-50 placeholder:text-gray-200 rounded-xl"
+                                        className="w-full   border-gray-200 py-2 px-3 md:px-3 md:py-4 focus:outline-none focus:border-black transition-all text-sm md:text-xl text-black bg-neutral-50 placeholder:text-gray-200 rounded-xl"
                                         placeholder="+91 888 000 0000"
                                     />
                                 </div>
@@ -356,7 +356,7 @@ export default function HiringPage() {
                                         type="url"
                                         value={formState.portfolio}
                                         onChange={handleInputChange}
-                                        className="w-full bg-transparent border-b border-gray-200 py-2 md:py-4 focus:outline-none focus:border-black transition-all text-base md:text-xl text-black px-2 placeholder:text-gray-200"
+                                        className="w-full bg-transparent border-b border-gray-200 py-2 md:py-4 focus:outline-none focus:border-black transition-all text-sm md:text-xl text-black px-2 placeholder:text-gray-200"
                                         placeholder="drive.google.com/..."
                                     />
                                 </div>
@@ -368,7 +368,7 @@ export default function HiringPage() {
                                         value={formState.reason}
                                         onChange={handleInputChange}
                                         rows={2}
-                                        className="w-full bg-transparent border-b border-gray-200 py-2 md:py-4 focus:outline-none focus:border-black transition-all text-base md:text-xl text-black px-2 placeholder:text-gray-200 resize-none"
+                                        className="w-full bg-transparent border-b border-gray-200 py-2 md:py-4 focus:outline-none focus:border-black transition-all text-sm md:text-xl text-black px-2 placeholder:text-gray-200 resize-none"
                                         placeholder="Why should we train you?"
                                     />
                                 </div>
