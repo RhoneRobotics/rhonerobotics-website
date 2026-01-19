@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation";
 import {
   Nav,
   NavBody,
@@ -12,7 +13,16 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 
+const NavbarExtra = ({ className, children, visible }: { className?: string, children: React.ReactNode, visible?: boolean }) => {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
+
 export function Navbar() {
+  const pathname = usePathname();
   const navItems = [
     {
       name: "Services",
@@ -40,16 +50,27 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
-          <NavItems items={navItems} />
+          <NavItems items={navItems.map(item => ({ ...item, link: pathname === "/" ? item.link : `/${item.link}` }))} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary" href="#contact">Contact Us</NavbarButton>
+            <NavbarButton variant="primary" href={pathname === "/" ? "#contact" : "/#contact"}>Contact Us</NavbarButton>
           </div>
         </NavBody>
 
+
+        <NavbarExtra className="fixed bottom-5 right-5 z-[60] hidden md:block">
+          <NavbarButton
+            variant="primary"
+            href="/hiring"
+            className="bg-gradient-to-b from-[#000000] via-[#484848] via-70% to-[#3f3f3f] hover:bg-green-600 text-neutral-50 border-0 shadow-lg text-lg font-semibold"
+          >
+            We are Hiring !
+          </NavbarButton>
+        </NavbarExtra>
+
         {/* Mobile Navigation */}
         <MobileNav className="   ">
-          
-          <MobileNavHeader> 
+
+          <MobileNavHeader>
             <NavbarLogo />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
@@ -64,13 +85,14 @@ export function Navbar() {
             {navItems.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
-                href={item.link}
+                href={pathname === "/" ? item.link : `/${item.link}`}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
               </a>
             ))}
+
             <div className="flex w-full flex-col gap-4">
 
               <NavbarButton

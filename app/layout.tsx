@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <ReactLenis root>
         <body
           className={`${geistSans.variable} ${plusjakartasans.variable} ${geistMono.variable} antialiased  w-full min-h-screen overflow-x-hidden`}
