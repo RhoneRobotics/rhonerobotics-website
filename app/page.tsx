@@ -2,7 +2,7 @@ import Hero from '@/components/Hero'
 import { InfiniteMarquee } from '@/components/InfiniteMarquee'
 import { Services } from '@/components/Services'
 import { OurProcesses } from '@/components/OurProcesses'
-import { Team } from '@/components/Team'
+// import { Team } from '@/components/Team'
 import CaseStudies from '@/components/CaseStudies'
 import Contact from '@/components/Contact'
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <Services />
       <OurProcesses />
       <CaseStudies />
-      <Team />
+      {/* <Team /> */}
       <Contact />
     </div>
   )

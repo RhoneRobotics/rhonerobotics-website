@@ -32,10 +32,10 @@ export function Navbar() {
       name: "Process",
       link: "#process",
     },
-    {
-      name: "Team",
-      link: "#team",
-    },
+    // {
+    //   name: "Team",
+    //   link: "#team",
+    // },
     {
       name: "Case Studies",
       link: "#case-studies",
