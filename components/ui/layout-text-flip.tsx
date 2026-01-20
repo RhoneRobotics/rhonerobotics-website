@@ -58,7 +58,7 @@ export const LayoutTextFlip = ({
   return (
     <motion.span
       className={cn(
-        "inline-flex items-center justify-center align-middle rounded-full w-[140px] md:w-[200px] py-1 md:py-4 font-sans text-2xl md:text-5xl font-bold tracking-tight shadow-lg transition-all mt-4 md:mt-0 duration-1000 ",
+        "inline-flex items-center justify-center align-middle rounded-full w-[140px] md:w-[200px] py-1 md:py-4 font-sans text-2xl md:text-5xl font-bold tracking-tight shadow-lg transition-colors mt-4 md:mt-0 duration-1000 ",
         currentColors.bg,
         currentColors.text,
         currentColors.border,
