@@ -12,8 +12,8 @@ const Home = () => {
       <InfiniteMarquee />
       <Services />
       <OurProcesses />
-      <Team />
       <CaseStudies />
+      <Team />
       <Contact />
     </div>
   )

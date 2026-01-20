@@ -40,7 +40,7 @@ export function Team() {
     ];
     return (
         <div className="md:py-10 md:py-20 px-4 md:px-12 lg:px-36   
-         bg-linear-to-br from-[#e9e9e9] overflow-x-hidden via-[#ffffff] via-50% to-[#ffffff] 
+         bg-neutral-50 
         " id="team">
             <h2 className="text-transparent text-5xl md:text-8xl font-bold bg-clip-text bg-gradient-to-t from-[#191919] via-[#383737] via-70% to-[#191919] py-6 md:py-10 drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]  w-fit md:w-fit  mx-auto md:mx-0">Our Team</h2>
             <AnimatedTestimonials testimonials={testimonials} />
