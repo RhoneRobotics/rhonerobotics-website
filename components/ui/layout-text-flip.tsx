@@ -58,22 +58,32 @@ export const LayoutTextFlip = ({
   return (
     <motion.span
       className={cn(
-        "inline-flex items-center justify-center align-middle rounded-full w-[140px] md:w-[200px] py-1 md:py-4 font-sans text-2xl md:text-5xl font-bold tracking-tight shadow-lg transition-colors mt-4 md:mt-0 duration-1000 ",
+        "inline-flex items-center justify-center align-middle rounded-full min-w-[160px] md:min-w-[220px] px-6 md:px-8 py-1 md:py-4 font-sans text-2xl md:text-5xl font-bold tracking-tight shadow-lg transition-colors mt-4 md:mt-0 duration-1000 ",
         currentColors.bg,
         currentColors.text,
         currentColors.border,
         "border",
         className
       )}
+      style={{
+        // Prevent font boosting on mobile Chrome
+        WebkitTextSizeAdjust: '100%',
+        textSizeAdjust: '100%',
+      }}
     >
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 20, opacity: 0 }}
+          // Use scale instead of y-transform to prevent layout shifts
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.3 }}
-          className="inline-block"
+          className="inline-block whitespace-nowrap"
+          style={{
+            WebkitTextSizeAdjust: '100%',
+            textSizeAdjust: '100%',
+          }}
         >
           {words[currentIndex]}
         </motion.span>

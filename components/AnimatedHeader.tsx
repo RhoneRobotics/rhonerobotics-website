@@ -44,13 +44,17 @@ export default function AnimatedHeader() {
             >
                 Scaling Global{" "}
                 <br className="hidden sm:block" />
+                {/* Using inline-flex and whitespace-nowrap to prevent layout shifts on mobile */}
+                {/* Restoring flex-wrap to prevent overflow on small screens, relying on text-size-adjust to fix misalignment */}
                 <span className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-4 md:inline-flex">
                     Innovation with{" "}
-                    <span className="relative inline-block min-w-[120px] md:min-w-[150px] text-left">
+                    <span className="relative inline-block min-w-[160px] md:min-w-[220px] text-left">
                         <LayoutTextFlip
+
                             words={["Design", "Create", "Deploy", "Invent"]}
                         />
                     </span>
+                    
                 </span>
             </motion.h1>
 
