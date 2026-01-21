@@ -161,7 +161,8 @@ html {
     @apply border-border outline-ring/50;
   }
 
-  html {
+   html,
+  body {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
